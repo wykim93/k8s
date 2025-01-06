@@ -5,12 +5,12 @@ jobs:
     name: Demo Job
     runs-on: ubuntu-latest
     steps:
-      - name: Print a environment
+      - name: Print environment variables
         env:
-          MY_VAR: Hi there! My Name is
-          FRIST_NAME: wonyoung
-          LAST_NAME: kim
-          AWS_JOB_NAME: kim.wy
-      run: |
-        echo $MY_VAR $FIRST_NAME $LAST_NAME.
-        echo $MY_VAR $AWS_JOB_NAME.
+          MY_VAR: "Hi there! My Name is"
+          FIRST_NAME: "wonyoung"
+          LAST_NAME: "kim"
+          AWS_JOB_NAME: "kim.wy"
+        run: |
+          echo "$MY_VAR $FIRST_NAME $LAST_NAME."
+          echo "$MY_VAR $AWS_JOB_NAME."
